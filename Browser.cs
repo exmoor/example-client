@@ -26,8 +26,8 @@ namespace example_client
             chrome_options.AddArgument("--disable-infobars");
             chrome_options.AddArgument("--disable-dev-shm-usage");
 
-            Driver = new ChromeDriver(chrome_options);
-            Driver.Manage().Window.Maximize();
+            Driver = new ChromeDriver(ChromeDriverService.CreateDefaultService(), chrome_options, TimeSpan.FromMinutes(3));
+            Driver.Manage().Timeouts().PageLoad.Add(System.TimeSpan.FromSeconds(30));
         }
 
         public string Title
