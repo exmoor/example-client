@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Dynamic;
 
 namespace example_client
-{
+
     namespace Google
     {
         [TestFixture]
